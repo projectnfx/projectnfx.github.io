@@ -11,7 +11,7 @@
 var torrentId = 'magnet:?xt=urn:btih:C89B3F2175E69EABFCCFEAAB76C51546E95BB8E5'
 
 client.add(torrentId, function (torrent) {
-  var file = torrent.files[1]
+  var file = torrent.files[0]
   file.appendTo('body') // append the file to the DOM
 })
 </script>
