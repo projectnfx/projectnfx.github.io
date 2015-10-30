@@ -8,10 +8,10 @@
 <script type="text/javascript">
 	var client = new WebTorrent()
 
-var torrentId = 'magnet:?xt=urn:btih:792d6535375e66c2ccb77504bdc587e74210761b&dn=Mr+Robot+S01E01+720p+HDTV+x264+AAC+-+Ozlem&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969'
+var torrentId = 'magnet:?xt=urn:btih:4f7eb72db0eeff4d69f7b9c0834290c67494f86a'
 
 client.add(torrentId, function (torrent) {
-  var file = torrent.files[0]
+  var file = torrent.files[1]
   file.appendTo('body') // append the file to the DOM
 })
 </script>
