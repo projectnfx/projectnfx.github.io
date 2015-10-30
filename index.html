@@ -1,116 +1,19 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!--META-->
-		<!--/META-->
-		<title>Hydraflix - pre-alpha 0.1</title>
-		<meta property="og:title" content="Hydraflix | Brings out the hydra in you!" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="http://hydraflix.github.io" />
-		<meta property="og:image" content="http://i.imgur.com/UptCSMk.png" />		
-		<!--CSS-->
-		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet"><!--Yeap, bootstrap-->
-		<link href="css/simple-sidebar.css" rel="stylesheet">
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>	
-		<link href="video-js/video-js.css" rel="stylesheet"><!--keep under the 4.11.4 for .srt support, if you upgrade fix that, bitch!-->
-		<link href="css/hydraflix-main.css" rel="stylesheet"><!--#ToDo: traslate it to a .less file-->
-		<!--/CSS-->
-		<!--JS-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>	
-		<script type="text/javascript"  src="video-js/video.js"></script><!--keep under the 4.11.4 for .srt support, if you upgrade fix that, bitch!-->
-		<script type="text/javascript" src="js/archive.js"></script><!--this make the zip magic-->
-		<!--/JS-->
-	</head>
-	<body>
-		<!--
-		<a href="#menu-toggle" id="menu-toggle" style="position: fixed; top: 0px; left: 0px; z-index: 1001;">
-			<img src="http://i.imgur.com/VtJPeAi.png">
-		</a>
-		<div id="wrapper" class="toggled">
-		-->
-	        <!-- Sidebar -->
-	        <!--
-	        <div id="sidebar-wrapper" style="overflow-x: hidden;">
-	            <ul class="sidebar-nav">
-	                <li class="sidebar-brand" style="margin-bottom:10px;">
-	                    <a href="#" style="text-align:center;">
-	                       <img src="http://i.imgur.com/edy6DsZ.png">
-	                    </a>
-	                </li>
-	                -->
-	                <!--
-	                <li>
-	                    <a href="#">Dashboard</a>
-	                </li>
-	                <li>
-	                    <a href="#">Shortcuts</a>
-	                </li>
-	                <li>
-	                    <a href="#">Overview</a>
-	                </li>
-	                <li>
-	                    <a href="#">Events</a>
-	                </li>
-	                <li>
-	                    <a href="#">About</a>
-	                </li>
-	                <li>
-	                    <a href="#">Services</a>
-	                </li>
-	                <li>
-	                    <a href="#">Contact</a>
-	                </li>
-	                -->
-	                <!--
-	            </ul>
-	        </div>
-	        -->
-	        <!-- /#sidebar-wrapper -->
+<head>
+	<title></title>
+	<script src="webtorrent.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	var client = new WebTorrent()
 
-	        <!-- Page Content -->
-	        <!--<div id="page-content-wrapper">-->
-				<!--PLAYER SECTION-->
-				<div id="fullscreen_player">
-				  	<div id="images"></div>
-				</div>
-				<!--/PLAYER SECTION-->
-				<!--DETAILS SECTION-->
-				<div id="fullscreen_detail">
-				  	<div id="images_detalle"></div>
-				</div>
-				<!--/DETAILS SECTION-->
-				<!--CATALOGUE-->
-				<div class="bg-overlay"></div>
-				<div id="movies" class="contentContainer row"></div>
-				<!--/CATALOGUE-->
-	        <!--</div>-->
-	        <!-- /#page-content-wrapper -->
+var torrentId = 'magnet:?xt=urn:btih:792d6535375e66c2ccb77504bdc587e74210761b'
 
-
-		<!--</div>--><!-- /#wrapper -->
-		<!--JS-->
-		<script type="text/javascript" src="js/catalogue.js"></script>
-		<script type="text/javascript" src="js/player.js"></script>
-		<script type="text/javascript" src="js/details.js"></script>
-	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-	    <!-- Menu Toggle Script -->
-	    <script>
-	    $("#menu-toggle").click(function(e) {
-	        e.preventDefault();
-	        $("#wrapper").toggleClass("toggled");
-	    });
-	    </script>	    	
-	    <!-- /#Menu Toggle Script -->
-		<!--/JS-->
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		
-		  ga('create', 'UA-69226061-1', 'auto');
-		  ga('send', 'pageview');
-		
-		</script>		
-	</body>
+client.add(torrentId, function (torrent) {
+  var file = torrent.files[0]
+  file.appendTo('body') // append the file to the DOM
+})
+</script>
+</body>
 </html>
