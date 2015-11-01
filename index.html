@@ -7,18 +7,12 @@
 </head>
 <body>
 <script type="text/javascript">
-	var client = new WebTorrent()
-
-var torrentId = 'magnet:?xt=urn:btih:66bee5825d083111e20de2fb55259988ffddd9f7'
-
-client.add(torrentId, function (torrent) {
-  var file = torrent.files[0]
-  file.appendTo('body') // append the file to the DOM
-})
-$.get("http://crossorigin.me/https://instant.io/#66bee5825d083111e20de2fb55259988ffddd9f7", function(data){
-	$("body").append(data);
-	console.log(data);
-});
+	var client = new WebTorrent();
+	var torrentId = 'magnet:?xt=urn:btih:d235f2fcd882d7f94ddcf531c8cac7cfde480817';
+	client.add(torrentId, function (torrent) {
+	  var file = torrent.files[0]
+	  file.appendTo('body') // append the file to the DOM
+	});
 </script>
 </body>
 </html>
