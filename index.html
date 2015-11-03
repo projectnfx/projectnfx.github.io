@@ -9,13 +9,32 @@
 <script type="text/javascript">
 	var client = new WebTorrent();
 	var torrentId = 'magnet:?xt=urn:btih:d235f2fcd882d7f94ddcf531c8cac7cfde480817';
+	// udp://tracker.webtorrent.io:80
 	client.add(torrentId, function (torrent) {
 	  var file = torrent.files[0]
 	  file.appendTo('body') // append the file to the DOM
 	// To seed!
+	/*
 	client.seed(torrent.infoHash, function onTorrent (torrent) {
     		console.log('Client is seeding:', torrent.infoHash)
   	})	  
+  	*/
+	});
+</script>
+<script type="text/javascript">
+	var client = new WebTorrent();
+	var torrentId = 'magnet:?xt=urn:btih:9BDDF9E3B43541286E9AEDDDF67150D9E9EF565B';
+	var tracker = '&tr=udp%3A%2F%2Ftracker.webtorrent.io:80';
+	client.add(torrentId+tracker, function (torrent) {
+		// magnet:?xt=urn:btih:43748a7da2c68b354382cef18f7ba66887f43cdd&dn=The.Last.Witch.Hunter.2015.HD-TS.XVID.AC3.HQ.Hive-CM8&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969
+	  var file = torrent.files[0]
+	  file.appendTo('body') // append the file to the DOM
+	// To seed!
+	/*
+	client.seed(torrent.infoHash, function onTorrent (torrent) {
+    		console.log('Client is seeding:', torrent.infoHash)
+  	})	  
+  	*/
 	});
 </script>
 </body>
