@@ -13,6 +13,10 @@
 	  var file = torrent.files[0]
 	  file.appendTo('body') // append the file to the DOM
 	});
+	// To seed!
+	client.seed(files, function onTorrent (torrent) {
+    		console.log('Client is seeding:', torrent.infoHash)
+  	})
 </script>
 </body>
 </html>
