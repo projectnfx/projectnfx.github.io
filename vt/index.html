@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" />
+    <title>VidTorrent 0.7</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="large.css" />
+    <link rel="stylesheet" type="text/css" media="only screen and (min-width:50px) and (max-width:500px)" href="small.css"/>
+    <link rel="stylesheet" type="text/css" media="only screen and (min-width:501px) and (max-width:800px)" href="medium.css"/>
+
+</head>
+<body style="background-color: dodgerblue">
+
+<div class="mainDiv" style="margin: 0 auto">
+<img src="banner.png" id="banner" style="background-color: transparent">
+<div class="formDiv">
+    <form id="download">
+
+        <input id = "link" name = "link" placeholder="Movie Link: "><br>
+
+
+        <input id = "email" name = "email" placeholder="Email Address: "><br>
+        <br>
+        <div style="text-align: center">
+            <button type="button" id="sendButton" name="sendButton" onclick="download()" class="myButton"> Download </button>
+            <img src="loader.gif" hidden="yes" id="loader">
+        </div>
+
+        <br>
+
+        <div id="searchArea">
+            <label for="search"> movie search </label>
+            <input type="search" name="" id="search" placeholder="Enter movie name">
+        </div>
+
+
+    </form>
+
+    <div id="testHide" >
+        <table id="pbay">
+
+        </table>
+    </div>
+</div>
+    <br>
+    <div class="formDiv" id="searchDiv">
+        <ul><p class="gList">Recently Downloaded Movies: </p></ul>
+        <div id="content">
+            <table id="area">
+
+            </table>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="jquery.js"></script>
+<script src="myscript.js"></script>
+<script>
+    function giveNotif(text) {
+        alert(text);
+    }
+</script>
+</body>
+</html>

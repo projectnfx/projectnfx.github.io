@@ -1,0 +1,15 @@
+.formDiv, .mainDiv {
+    width: 100%;
+}
+
+.formDiv {
+    border: none;
+    border-radius: 0px;
+    background-color: aliceblue;
+}
+
+
+
+#searchDiv {
+
+}

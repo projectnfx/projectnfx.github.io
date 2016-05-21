@@ -1,0 +1,105 @@
+input {
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2) inset, 0 -1px 0 rgba(0,0,0,0.05) inset;
+    transition: all 0.2s linear;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    color: #222222;
+    position: relative;
+    height: 36px;
+    width: 100%;
+    padding-left: 30px;
+}
+
+
+
+table {
+   width: 100%;
+}
+
+tr, td{
+    width: 100%;
+    font: bold 14px "Helvetica Neue", sans-serif;
+    background-color: lightskyblue;
+    padding-bottom: 5px;
+
+}
+
+td:hover {
+    background-color: aliceblue;
+}
+
+li {
+    font: normal 12px "Helvetica Neue", sans-serif;
+}
+
+.formDiv {
+    overflow: hidden;
+
+}
+
+.gList {
+
+    font: bold 14px "Helvetica Neue", sans-serif !important;
+    color: red;
+}
+
+.myButton {
+    -moz-box-shadow:inset 0px -3px 7px 0px #29bbff;
+    -webkit-box-shadow:inset 0px -3px 7px 0px #29bbff;
+    box-shadow:inset 0px -3px 7px 0px #29bbff;
+    background-color:#2dabf9;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    border:1px solid #0b0e07;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Verdana;
+    font-size:18px;
+    padding:8px 76px;
+    text-decoration:none;
+    text-shadow:0px 0px 0px #263666;
+}
+.myButton:hover {
+    background-color:#0688fa;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+#mainHeader {
+    font-family: "Helvetica Neue", sans-serif;
+    color: white;
+    font-size: 36px;
+}
+
+#banner {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#searchArea {
+    margin: 0 auto;
+    text-align: center;
+    background: dodgerblue;
+    padding: 10px;
+    width: 220px;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+}
+
+#searchArea label {
+    font: bold 1.3em Arial;
+    color:#ffffff;
+    text-decoration:none;
+    text-shadow:0px 0px 0px #263666;
+    text-transform: uppercase;
+}
+
