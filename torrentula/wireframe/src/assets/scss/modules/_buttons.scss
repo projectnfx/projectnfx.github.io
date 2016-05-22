@@ -1,0 +1,137 @@
+//==============================
+// Modules - Base
+//==============================
+
+.button {
+  width: 50px;
+  height: 40px;
+  position: relative;
+  float: left;
+  border-radius: 3px;
+  margin-right: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+  }
+}
+
+.button-cog {
+  background: #aaa;
+
+  &:hover {
+    background: darken(#aaa, 10%);
+  }
+}
+
+.button-download {
+  background: $blue;
+
+  &:hover {
+    background: darken($blue, 10%);
+  }
+}
+
+.play,
+.pause {
+  display: none;
+}
+
+.icon-play,
+.icon-pause {
+  font-size: 15px;
+}
+
+.alt-button {
+  height: 20px;
+  position: relative;
+  float: left;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    position: absolute;
+    background: $darkgrey;
+    color: #ccc;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    display: block;
+    top: -40px;
+    left: 50%;
+    width: auto;
+    font-style: normal;
+    font-size: 13px;
+    padding: 5px 10px;
+    white-space: nowrap;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    display: none;
+    //opacity: 0.2;
+  }
+
+  &:after {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $darkgrey;
+    position: absolute;
+    left: 50%;
+    top: -11px;
+    transform: translateX(-50%);
+    display: none;
+  }
+
+  &:hover {
+    &:before,
+    &:after {
+      display: block;
+    }
+  }
+
+  &.cancel {
+    &:before {
+      content: 'Cancel'
+    }
+  }
+
+  &.alt-download {
+    &:before {
+      content: 'Standard Download'
+    }
+  }
+
+  i {
+    color: $darkgrey;
+    float: left;
+    margin: 0 8px;
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.icon-cancel-circled:hover {
+      color: #f00;
+    }
+
+    &.icon-down-circled:hover {
+      color: green;
+    }
+  }
+}
+
+
+
+

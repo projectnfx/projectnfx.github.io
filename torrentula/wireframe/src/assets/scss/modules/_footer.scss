@@ -1,0 +1,20 @@
+//==============================
+// Modules - Base
+//==============================
+
+footer {
+  background: $darkgrey;
+  color: #ccc;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 20px;
+  z-index: 100;
+  @include clearfix;
+
+  div {
+    width: 33%;
+    float: left;
+  }
+}

@@ -1,0 +1,34 @@
+//==============================
+// Mixins
+//==============================
+
+@mixin clearfix {
+  &:after {
+    clear: both; 
+    content: ' ';
+    display: table;
+  }
+}
+
+@mixin fillcontainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Media Queries
+//------------------------------
+
+@mixin bp($point) {
+  @if $point == l {
+    @media only screen and (max-width: 1023px) { @content; }
+  }
+  @else if $point == m {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+  @else if $point == s {
+    @media only screen and (max-width: 479px) { @content; }
+  }
+}

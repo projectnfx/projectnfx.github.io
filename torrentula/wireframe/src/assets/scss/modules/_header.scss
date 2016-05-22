@@ -1,0 +1,42 @@
+//==============================
+// Modules - Base
+//==============================
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.masthead {
+  padding: 30px;
+  background: $darkgrey;
+  @include clearfix;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  float: left;
+}
+
+.drag {
+  color: #fff;
+  float: right;
+  padding: 15px;
+  background: #555;
+  border-radius: 2px;
+
+  input {
+    margin-bottom: 5px;
+  }
+}
+
+.table-header {
+  background: #fff;
+  border-bottom: #ebebeb solid 1px;
+  @include clearfix;
+}
