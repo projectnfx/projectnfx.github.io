@@ -1,0 +1,22 @@
+{
+  "name": "popcornWeb",
+  "version": "0.0.1",
+  "authors": [
+    "svstoichkov <sv.stoichkov@yahoo.com>"
+  ],
+  "description": "popcorn time in the browser",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "handlebars": "~4.0.2",
+    "jquery": "~2.1.4",
+    "sammy": "~0.7.6"
+  }
+}

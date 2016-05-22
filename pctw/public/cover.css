@@ -1,0 +1,18 @@
+#loader
+{
+  background:url(resources/loading.gif) no-repeat center center;
+  height: 100%;
+  width: 100%;
+}
+
+::cue{
+  font-size: 80px;
+  background-color: transparent;
+  margin-bottom: 2em;
+  text-shadow: 0px 0px 10px #000, -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000;
+}
+
+html,
+body {
+  height: 100%;
+}

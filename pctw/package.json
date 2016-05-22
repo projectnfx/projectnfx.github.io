@@ -1,0 +1,25 @@
+{
+  "name": "popcorn-web",
+  "version": "0.0.1",
+  "description": "popcorn time for the browser",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "socket.io": "^1.3.6",
+    "webtorrent": "^0.62.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svstoichkov/popcornWeb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/svstoichkov/popcornWeb/issues"
+  },
+  "homepage": "https://github.com/svstoichkov/popcornWeb#readme"
+}

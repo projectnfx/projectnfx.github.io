@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Popcorn time in the browser!</title>
+
+    <link href="cover.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/sammy/lib/sammy.js"></script>
+    <script src="bower_components/handlebars/handlebars.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        Movies
+                        <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#/">All</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a class="genre">Action</a></li>
+                        <li><a class="genre">Adventure</a></li>
+                        <li><a class="genre">Animation</a></li>
+                        <li><a class="genre">Biography</a></li>
+                        <li><a class="genre">Comedy</a></li>
+                        <li><a class="genre">Crime</a></li>
+                        <li><a class="genre">Documentary</a></li>
+                        <li><a class="genre">Drama</a></li>
+                        <li><a class="genre">Family</a></li>
+                        <li><a class="genre">Fantasy</a></li>
+                        <li><a class="genre">Gameshow</a></li>
+                        <li><a class="genre">History</a></li>
+                        <li><a class="genre">Horror</a></li>
+                        <li><a class="genre">Music</a></li>
+                        <li><a class="genre">Musical</a></li>
+                        <li><a class="genre">Mistery</a></li>
+                        <li><a class="genre">Romance</a></li>
+                        <li><a class="genre">Science Fiction</a></li>
+                        <li><a class="genre">Sitcom</a></li>
+                        <li><a class="genre">Sport</a></li>
+                        <li><a class="genre">Thriller</a></li>
+                        <li><a class="genre">War</a></li>
+                        <li><a class="genre">Western</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">TV Series</a>
+                </li>
+            </ul>
+
+            <div class="navbar-form navbar-right" method="get" action="/" role="search">
+                <div class="input-group">
+                    <input id="tb-search" type="text" class="form-control" placeholder="Search">
+              <span class="input-group-btn">
+                <a href="#" id="btn-search" class="btn btn-default">
+                    <span class="glyphicon glyphicon-search"></span>
+                </a>
+              </span>
+                </div>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        Sort By
+                        <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="sortBy">Popularity</a></li>
+                        <li><a class="sortBy">Trends</a></li>
+                        <li><a class="sortBy">Date added</a></li>
+                        <li><a class="sortBy">Year</a></li>
+                        <li><a class="sortBy">Rating</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="content" class="container"></div>
+
+<div id="loader"></div>
+
+
+<script src="src/templates.js"></script>
+<script src="src/yts-parser.js"></script>
+<script src="src/sammy-routes.js"></script>
+
+<script>
+    $('#btn-search').on('click', function(){
+        var query = encodeURIComponent($('#tb-search').val());
+        window.location = '#/search/' + query;
+        console.log(query);
+    })
+</script>
+</body>
+</html>
