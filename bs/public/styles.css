@@ -1,0 +1,71 @@
+body {
+    background-color: #323232;
+}
+video {
+  height: 100%;
+  width: 100%;
+}
+.search{
+  background-color: #4F4F4F;
+  border-width: 3px;
+	border-radius: 5px;
+}
+.centered {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.text {
+  color: #D8D8D8;
+  font-family: 'Cinzel Decorative', cursive;
+  text-align: center;
+}
+.navButton {
+	background-color: #323232;
+	color: #C0C0C0;
+  border-style: outset;
+  border-color: #C0C0C0;
+  border-width: 3px;
+	border-radius: 5px;
+	padding: 3px 8px;
+  width: 100px;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 11px;
+	font-weight: bold;
+  transition:background-color .2s
+}
+.navButton:hover {
+  background-color: #4F4F4F;
+}
+.episode {
+  position: relative;
+  cursor: auto;
+  display: block;
+  clear: left;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.episode_title {
+}
+.episode_info {
+}
+.episode_link {
+  text-decoration: none;
+}
+.episode_description {
+  font-size: 13px;
+  line-height: 140%;
+  margin-bottom: 10px;
+  padding-bottom: 40px;
+  padding-top: 5px;
+}
+.episode_airdate {
+}
+.footer {
+  position: absolute;
+  left: 50%;
+  top:100%;
+  transform: translate(-50%, -105%);
+}

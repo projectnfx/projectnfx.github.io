@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>bit-stream - shows</title>
+    <link rel="shortcut icon" href="static/icon.ico">
+    <link rel="stylesheet" type="text/css" href='static/styles.css'/>
+    <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="centered text">
+      <% for(var i=0; i<shows.length; i++) {%>
+      <a class="navButton" href="../episodes?show=<%= shows[i].id %>"><%= shows[i].title %></a>
+      <% } %>
+    </div>
+  </body>
+</html>

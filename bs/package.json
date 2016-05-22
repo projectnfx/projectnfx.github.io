@@ -1,0 +1,26 @@
+{
+  "name": "bit-stream",
+  "version": "1.0.0",
+  "description": "stream bit torrent videos to the browser",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^2.3.1",
+    "express": "^4.12.2",
+    "eztv": "^0.0.8",
+    "torrent-stream": "^0.18.0",
+    "body-parser": "^1.12.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MasterCtrl/bit-stream.git"
+  },
+  "keywords": [
+    "node",
+    "bit",
+    "torrent",
+    "stream",
+    "video"
+  ],
+  "author": "robrtgray@gmail.com",
+  "license": "ISC"
+}

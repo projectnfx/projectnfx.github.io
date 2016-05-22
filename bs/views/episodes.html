@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>bit-stream - episodes</title>
+    <link rel="shortcut icon" href="static/icon.ico">
+    <link rel="stylesheet" type="text/css" href='static/styles.css'/>
+    <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="text">
+      <% for(var i=0; i<episodes.length; i++) { %>
+      <div class="episode">
+        <!-- <div class="episode_image">
+          <a href="episodes[i].url" title="episodes[i].title">
+            <img width="200" height="112" alt="episodes[i].title" src="episodes[i].image">
+          </a>
+        </div> -->
+        <div class="episode_info">
+          <strong><a class="episode_link" href="<%= episodes[i].url %>1" title="<%= episodes[i].title %>"><%= episodes[i].title %></a></strong>
+          <div class="episode_airdate">17 Sep. 2014</div>
+          <div class="episode_description"><%= episodes[i].extra %></div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>
