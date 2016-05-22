@@ -1,0 +1,48 @@
+$button-icon-color: $white;
+$options-button-color: $mid-grey;
+$download-button-color: $mid-blue;
+$cancel-button-color: $mid-red;
+$switch-dl-type-button-color: $mid-green;
+
+@mixin basic-button($color : $dark-grey) {
+  width: 50px;
+  height: 40px;
+  position: relative;
+  float: left;
+  border-radius: 3px;
+  margin-right: 10px;
+  background-color: $color;
+  outline: none;
+  border: 0;
+  @include transition(background-color 0.2s ease-out);
+
+  &:hover {
+    background-color: darken($color, 15%);
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: $button-icon-color;
+    cursor: pointer;
+    font-size: 20px;
+  }
+}
+
+.button-options {
+  @include basic-button($options-button-color);
+}
+
+.button-download {
+  @include basic-button($download-button-color);
+}
+
+.button-clear {
+  @include basic-button($cancel-button-color);
+}
+
+.button-revert {
+  @include basic-button($switch-dl-type-button-color);
+}

@@ -1,0 +1,91 @@
+$progress-bar-incomplete-color: $transparent-green;
+$progress-bar-complete-color: $translucent-green;
+
+$item-background-color: $white;
+$item-second-background-color: $light-grey;
+
+.item-stats {
+  display: block;
+  position: relative;
+  z-index: 2;
+
+  @include clear();
+
+  .small-info, .file-name {
+    position: relative;
+    top: 14px;
+  }
+}
+
+.progress-bar {
+  z-index: 1;
+  background-color: $progress-bar-incomplete-color;
+
+  @include transition(background-color 0.3s ease-out);
+
+  &.completed {
+    background-color: $progress-bar-complete-color;
+  }
+}
+
+.item {
+  background-color: $item-background-color;
+  padding: 5px 0;
+  @include transition(background-color 0.2s ease-out);
+
+  &:hover {
+      background-color: darken($item-background-color, 7%);
+  }
+
+  .item-inner {
+    padding: 0 15px;
+  }
+
+  &:nth-child(even) {
+    background-color: $item-second-background-color;
+
+    &:hover {
+      background-color: darken($item-second-background-color, 7%);
+    }
+  }
+}
+
+.headers {
+  margin: 15px auto;
+  padding: 0 15px;
+  display: block;
+  @include clear();
+}
+
+.buttons-col {
+  @include clear();
+}
+
+.extra-info {
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 0;
+  display: block;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+
+  input {
+    margin: 15px 0;
+  }
+
+  @include transition(height 0.3s ease-out);
+
+  &.showing {
+    height: 60px;
+  }
+}
+
+.preview {
+  margin: 30px;
+  max-width: 300px;
+  max-height: 300px;
+  position: relative;
+  z-index: 2;
+}

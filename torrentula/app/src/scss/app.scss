@@ -1,0 +1,18 @@
+@import 'normalize';
+@import 'bourbon';
+@import 'mixins';
+@import 'fonts';
+@import 'icons';
+@import 'colors';
+@import 'buttons';
+@import 'columns';
+@import 'item';
+@import 'inputs';
+@import 'header';
+
+body {
+  overflow: scroll;
+  padding-bottom: 20px;
+  font-family: 'ProximaNova';
+  font-size: 16px;
+}

@@ -1,0 +1,13 @@
+$input-color: $dark-grey;
+
+input {
+  width: 100%;
+  border-radius: 5px;
+  border: 0;
+  padding: 10px;
+  color: $input-color;
+}
+
+.hash-input {
+  width: 300px;
+}

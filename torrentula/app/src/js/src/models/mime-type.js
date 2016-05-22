@@ -1,0 +1,21 @@
+const mimeTypes = {
+  aac: 'audio/aac',
+  css: 'text/css',
+  html: 'text/html',
+  js: 'application/javascript',
+  m4a: 'audio/mp4',
+  md: 'text/x-markdown',
+  mp3: 'audio/mpeg',
+  mp4: 'video/mp4',
+  oga: 'audio/ogg',
+  ogg: 'audio/ogg',
+  pdf: 'application/pdf',
+  txt: 'text/plain',
+  wav: 'audio/wav',
+  webm: 'video/webm'
+}
+export default (filename) => {
+  const info = filename.match(/[^\\]*\.(\w+)$/);
+  const extension = info[1];
+  return mimeTypes[extension];
+};

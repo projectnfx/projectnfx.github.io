@@ -1,0 +1,26 @@
+{
+  "name": "Torrentula",
+  "description": "Download everything with webtorrent!",
+  "version": "1",
+  "manifest_version": 2,
+  "icons": {
+    "16": "img/icons/icon16.png",
+    "48": "img/icons/icon48.png",
+    "128": "img/icons/icon128.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1V0EB3RUsWRDcccbZucP+scnMVt7lVkQLqoQzYLkjjr17WwP2aalJZapIDGetLTPAN9GfK7oT/f+OsUuscv5lv12VK0QPoznSeZvgwIZGl4ngOwk4PfFC3sCOgE52YxVrv6UdgyeDe9N9hMgNCYyXp4BeoZ6dtRcwQZSvoIb77hNdUIG9zs7HHif/QflCtTThhBxTlD4R6T5U620SMk8Yrko2qQfC6KMPUvsjLrzGAF7A5htR2AAjB2hsCFDG2ReFaiTGsU7RxxUvO6tqWLGUxwUwub5lDEQW2Icj40820Vnb0mjh+ESGlOZ1bvyNjO1ZTJaE1R9ptu99ofXwXf1swIDAQAB",
+  "app": {
+    "background": {
+      "scripts": ["js/background.js"],
+      "persistent": true
+    }
+  },
+  "permissions": [
+    "http://localhost:35729/",
+    "http://*/",
+    "https://*/",
+    "storage",
+    "unlimitedStorage",
+    {"fileSystem": ["write"]}
+  ]
+}

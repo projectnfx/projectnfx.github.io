@@ -1,0 +1,93 @@
+/* ------------------------
+Breakpoint Usage:
+
+.selector {
+  color: red;
+  @include breakpoint(desktop) { width: 50px; }
+  @include breakpoint(mobile) { width: 100%; }
+}
+*/
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 1101px) { @content; }
+  } @else if $point == tablet {
+    @media (max-width: 1100px)  { @content; }
+  } @else if $point == mobile {
+    @media (max-width: 870px)  { @content; }
+  } @else if $point == s-mobile {
+    @media (max-width: 480px)  { @content; }
+  } @else if $point == s-desktop {
+    @media (max-width: 1480px) and (min-width: 1100px)  { @content; }
+  } @else if $point == l-desktop {
+    @media (min-width: 1280px)  { @content; }
+  } @else {
+    @media (max-width: #{$point})  { @content; }
+  }
+}
+
+
+// Size of div based on the ratio of image
+@mixin panel-size($width, $height) {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+
+  &:after {
+    padding-top: $height / $width * 100%;
+    content: '';
+    display: block;
+  }
+}
+
+@mixin clear-panel-size() {
+  &:after {
+    padding-top: 0;
+  }
+}
+
+@mixin background-sprite($icon, $set-dimensions: false) {
+  @extend %#{$icon}-background;
+
+  @if $set-dimensions == true {
+    @extend %#{$icon}-dimensions;
+  }
+}
+
+@mixin transform-center($position:'') {
+  @if($position == 'vertical') {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+  } @else if($position == 'horizontal') {
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+  } @else {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translateX(-50%) translateY(-50%));
+  }
+}
+
+@mixin clear-transform() {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  @include transform(none);
+}
+
+@mixin clear() {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
