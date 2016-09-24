@@ -324,11 +324,11 @@ app.controller('ViewCtrl', ['$scope', '$rootScope', '$http', '$log', '$location'
     ngNotify.set(`Received ${torrent.name} metadata`)
     torrent.files.forEach(function (file) {
         console.log("file" +file);
-        blob = new Blob([file], {type: "video/mp4"}),
-        console.log("blob" +blob);
-        url = window.URL.createObjectURL(blob);
+        //blob = new Blob([file], {type: "video/mp4"}),
+        //console.log("blob" +blob);
+        url = window.URL.createObjectURL(file);
         console.log("url" +url);
-        $("#viewer").append('<video id="my-video" class="video-js" controls autoplay width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}"><source id="my-video-source" src="'+url+'" type="video/mp4"></video>')        
+        $("#viewer").append('<video id="my-video" class="video-js" controls autoplay width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}"><source id="my-video-source" src="'+url+'.mp4" type="video/mp4"></video>')        
 
         /*
       file.appendTo('#viewer')
