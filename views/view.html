@@ -17,5 +17,4 @@
     </div>
   </div>
   <div class="div" ng-if="selectedTorrent" style="text-align: center">Downloaded {{$root.selectedTorrent.downloaded | pbytes}}/{{$root.selectedTorrent.length | pbytes}} ({{$root.selectedTorrent.progress | progress}}) at {{$root.selectedTorrent.downloadSpeed | pbytes:1}} from {{$root.selectedTorrent.numPeers}} peers. ETA: {{$root.selectedTorrent.timeRemaining | humanTime}}</div>
-  <div id="projectnfx"></div>
 </div>
