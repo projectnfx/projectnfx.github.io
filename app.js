@@ -325,8 +325,7 @@ app.controller('ViewCtrl', ['$scope', '$rootScope', '$http', '$log', '$location'
     torrent.files.forEach(function (file) {
       
 
-        myBlob = file
-        var myFile = blobToFile(myBlob, "my-video.mp4");
+        var myFile = new File([file], "my-video.mp4");
         $("#viewer").append('<video id="my-video" class="video-js" controls preload="metadata" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}"><source id="my-video-source" src="'+myFile+'" type="video/mp4"></video>')        
 
         /*
