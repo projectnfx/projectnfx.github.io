@@ -165,6 +165,8 @@ app.controller('BTorrentCtrl', ['$scope', '$rootScope', '$http', '$log', '$locat
           $rootScope.client.processing = false
         }
         file.url = url
+                $("#viewer").append('<video id="my-video" class="video-js" controls preload="metadata" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}"><source id="my-video-source" src="'+file.url+'" type="video/mp4"></video>')
+
         if (!isSeed) {
           dbg('Done ', file)
           ngNotify.set(`<b>${file.name}</b> ready for download`, 'success')
@@ -320,7 +322,7 @@ app.controller('ViewCtrl', ['$scope', '$rootScope', '$http', '$log', '$location'
         }
         file.url = url
         console.log("file.url"+file.url)
-        $("#viewer").append('<video id="my-video" class="video-js" controls preload width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}"><source id="my-video-source" src="'+file.url+'" type="video/mp4"></video>')
+        $("#viewer").append('<video id="my-video" class="video-js" controls preload="metadata" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}"><source id="my-video-source" src="'+file.url+'" type="video/mp4"></video>')
         // dbg('Done ', file)
       })
     })
