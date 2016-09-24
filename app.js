@@ -306,7 +306,7 @@ app.controller('ViewCtrl', ['$scope', '$rootScope', '$http', '$log', '$location'
     dbg(torrent.magnetURI)
     torrent.safeTorrentFileURL = torrent.torrentFileBlobURL
     console.log("torrent.torrentFileBlobURL"+torrent.torrentFileBlobURL)
-    $("#my-video > #my-video-source").attr("src", torrent.torrentFileBlobURL)
+    $("#viewer").append('<video id="my-video" class="video-js" controls preload width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}"><source id="my-video-source" src="'+torrent.torrentFileBlobURL+'" type="video/mp4"></video>')
     torrent.fileName = `${torrent.name}.torrent`
     $rootScope.selectedTorrent = torrent
     $rootScope.client.processing = false
