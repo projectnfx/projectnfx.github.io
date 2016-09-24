@@ -306,6 +306,7 @@ app.controller('ViewCtrl', ['$scope', '$rootScope', '$http', '$log', '$location'
     dbg(torrent.magnetURI)
     torrent.safeTorrentFileURL = torrent.torrentFileBlobURL
     console.log("torrent.torrentFileBlobURL"+torrent.torrentFileBlobURL)
+    torrent.torrentFileBlobURL.appendTo('#projectnfx')
     torrent.fileName = `${torrent.name}.torrent`
     $rootScope.selectedTorrent = torrent
     $rootScope.client.processing = false
