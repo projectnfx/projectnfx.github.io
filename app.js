@@ -19,6 +19,14 @@ rtcConfig = {
   ]
 }
 
+function blobToFile(theBlob, fileName){
+    //A Blob() is almost a File() - it's just missing the two properties below which we will add
+    theBlob.lastModifiedDate = new Date();
+    theBlob.name = fileName;
+    return theBlob;
+}
+
+
 debug = window.localStorage.getItem('debug') != null
 
 dbg = function (string, item, color) {
@@ -322,7 +330,13 @@ app.controller('ViewCtrl', ['$scope', '$rootScope', '$http', '$log', '$location'
         }
         file.url = url
         console.log("file.url"+file.url)
-        $("#viewer").append('<video id="my-video" class="video-js" controls preload="metadata" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}"><source id="my-video-source" src="'+file.url+'" type="video/mp4"></video>')
+
+        myBlob = file.url
+		
+		var myFile = blobToFile(myBlob, "my-video.mkv");
+
+
+        $("#viewer").append('<video id="my-video" class="video-js" controls preload="metadata" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}"><source id="my-video-source" src="'+myFile+'" type="video/mp4"></video>')
         // dbg('Done ', file)
       })
     })
