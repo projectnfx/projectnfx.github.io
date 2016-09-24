@@ -306,7 +306,7 @@ app.controller('ViewCtrl', ['$scope', '$rootScope', '$http', '$log', '$location'
     dbg(torrent.magnetURI)
     torrent.safeTorrentFileURL = torrent.torrentFileBlobURL
     console.log("torrent.torrentFileBlobURL"+torrent.torrentFileBlobURL)
-    $("#viewer").append('<video id="my-video" class="video-js" controls preload width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}"><source id="my-video-source" src="'+torrent.torrentFileBlobURL+'" type="video/mp4"></video>')
+
     torrent.fileName = `${torrent.name}.torrent`
     $rootScope.selectedTorrent = torrent
     $rootScope.client.processing = false
@@ -320,6 +320,8 @@ app.controller('ViewCtrl', ['$scope', '$rootScope', '$http', '$log', '$location'
         }
         file.url = url
         console.log("file.url"+file.url)
+        $("#viewer").append('<video id="my-video" class="video-js" controls preload width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}"><source id="my-video-source" src="'+torrent.safeTorrentFileURL+'" type="video/mp4"></video>')
+        $("#viewer").append('<video id="my-video" class="video-js" controls preload width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}"><source id="my-video-source" src="'+file.url+'" type="video/mp4"></video>')
         dbg('Done ', file)
       })
     })
