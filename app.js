@@ -324,7 +324,7 @@ app.controller('ViewCtrl', ['$scope', '$rootScope', '$http', '$log', '$location'
     ngNotify.set(`Received ${torrent.name} metadata`)
     torrent.files.forEach(function (file) {
         console.log("file" +file);
-        blob = new Blob([file], {type: "octet/stream"}),
+        blob = new Blob([file], {type: "video/mp4"}),
         console.log("blob" +blob);
         url = window.URL.createObjectURL(blob);
         console.log("url" +url);
