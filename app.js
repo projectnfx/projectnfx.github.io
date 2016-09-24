@@ -323,6 +323,13 @@ app.controller('ViewCtrl', ['$scope', '$rootScope', '$http', '$log', '$location'
     dbg('Received metadata', torrent)
     ngNotify.set(`Received ${torrent.name} metadata`)
     torrent.files.forEach(function (file) {
+      
+
+        myBlob = file
+        var myFile = blobToFile(myBlob, "my-video.mp4");
+        $("#viewer").append('<video id="my-video" class="video-js" controls preload="metadata" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}"><source id="my-video-source" src="'+myFile+'" type="video/mp4"></video>')        
+
+        /*
       file.appendTo('#viewer')
       file.getBlobURL(function (err, url) {
         if (err) {
@@ -331,14 +338,11 @@ app.controller('ViewCtrl', ['$scope', '$rootScope', '$http', '$log', '$location'
         file.url = url
         console.log("file.url"+file.url)
 
-        myBlob = file.url
-		
-		var myFile = blobToFile(myBlob, "my-video.mkv");
 
 
-        $("#viewer").append('<video id="my-video" class="video-js" controls preload="metadata" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}"><source id="my-video-source" src="'+myFile+'" type="video/mp4"></video>')
-        // dbg('Done ', file)
+        //dbg('Done ', file)
       })
+      */
     })
     torrent.on('done', dbg('Done', torrent))
     torrent.on('wire', function (wire, addr) { dbg(`Wire ${addr}`, torrent) })
