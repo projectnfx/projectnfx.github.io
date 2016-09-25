@@ -337,7 +337,12 @@ app.controller('ViewCtrl', ['$scope', '$rootScope', '$http', '$log', '$location'
         
         file.getBlobURL(function (err, url) {
           console.log("url "+url)
-          $("#my-video-source").attr('src', url)  
+          $("#my-video-source").append('<video controls autoplay width="640" height="264"><source id="my-video-source" src="'+url+'" type="video/mp4"></video>') 
+
+
+    
+
+
         })
               
 
