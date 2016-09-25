@@ -334,8 +334,12 @@ app.controller('ViewCtrl', ['$scope', '$rootScope', '$http', '$log', '$location'
         console.log("binaryData "+binaryData)
         var url = window.URL.createObjectURL(new Blob(binaryData, {type: "video/mp4"}))
         */
-        console.log("file.getBlobURL "+file.getBlobURL)
-        $("#my-video-source").attr('src', file.getBlobURL)        
+        
+        file.getBlobURL(function (err, url) {
+          console.log("url "+url)
+          $("#my-video-source").attr('src', url)  
+        })
+              
 
         /*
       file.appendTo('#viewer')
