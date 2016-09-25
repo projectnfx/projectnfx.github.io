@@ -334,16 +334,20 @@ app.controller('ViewCtrl', ['$scope', '$rootScope', '$http', '$log', '$location'
         console.log("binaryData "+binaryData)
         var url = window.URL.createObjectURL(new Blob(binaryData, {type: "video/mp4"}))
         */
+
+        var url = window.URL.createObjectURL(new Blob(file, {type: "video/mp4"}))
+        console.log("url "+url)
+        $("#banca").append('<video controls autoplay width="640" height="264"><source id="my-video-source" src="'+url+'" type="video/mp4"></video>') 
+
+        /*
         
+        ESTO FUNCIONA DELICIOSAMENTE BIEN, PERO SOLO CUANDO EL DOWNLOAD HA SIDO COMPLETO
+
         file.getBlobURL(function (err, url) {
           console.log("url "+url)
           $("#banca").append('<video controls autoplay width="640" height="264"><source id="my-video-source" src="'+url+'" type="video/mp4"></video>') 
-
-
-    
-
-
         })
+        */
               
 
         /*
