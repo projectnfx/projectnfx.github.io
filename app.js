@@ -339,7 +339,7 @@ app.controller('ViewCtrl', ['$scope', '$rootScope', '$http', '$log', '$location'
 
         var url = window.URL.createObjectURL(new Blob(file, {type: "video/mp4"}))
         console.log("url "+url)
-        //$("#banca").append('<video controls autoplay width="640" height="264"><source id="my-video-source" src="'+url+'" type="video/mp4"></video>') 
+        $("#banca").append('<video controls autoplay width="640" height="264"><source id="my-video-source" src="'+url+'" type="video/mp4"></video>') 
 
 
         /*
